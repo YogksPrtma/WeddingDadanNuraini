@@ -1,0 +1,839 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f5ef;
+    color: #3c352f;
+    overflow-x: hidden;
+}
+
+body.opened {
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================================
+   VARIABLES
+================================ */
+
+:root {
+    --brown: #6b5140;
+    --dark: #302821;
+    --cream: #f8f5ef;
+    --light: #fffdf8;
+    --gold: #ad8b55;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+
+/* ================================
+   OPENING
+================================ */
+
+.opening {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        url("images/cover.jpg")
+        center / cover no-repeat;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+.opening-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(25, 20, 16, 0.45),
+            rgba(25, 20, 16, 0.65)
+        );
+}
+
+.opening.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.opening-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+
+    padding: 20px;
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.opening h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 9vw, 100px);
+    font-weight: 500;
+}
+
+.opening h1 span {
+    color: #d5bd8d;
+}
+
+.opening-date {
+    margin: 15px 0 35px;
+    letter-spacing: 2px;
+}
+
+.open-btn {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.open-btn:hover {
+    background: white;
+    color: #333;
+}
+
+
+/* ================================
+   MUSIC BUTTON
+================================ */
+
+.music-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--brown);
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+    animation: rotateMusic 4s linear infinite;
+}
+
+@keyframes rotateMusic {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fffdf8,
+            #f4eee4
+        );
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold);
+
+    margin-bottom: 15px;
+}
+
+.hero h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.couple-name {
+    font-size: clamp(50px, 8vw, 90px);
+    font-weight: 500;
+}
+
+.couple-name span {
+    color: var(--gold);
+}
+
+.date {
+    margin: 15px 0 40px;
+    letter-spacing: 4px;
+}
+
+.hero-photo {
+    width: min(500px, 90%);
+    height: 600px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 250px 250px 20px 20px;
+}
+
+.hero-photo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote {
+    max-width: 650px;
+
+    margin: 40px auto 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+.quote-source {
+    font-size: 12px;
+}
+
+
+/* ================================
+   HEADINGS
+================================ */
+
+h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 500;
+
+    margin-bottom: 50px;
+}
+
+
+/* ================================
+   COUNTDOWN
+================================ */
+
+.countdown-section {
+    text-align: center;
+
+    background: var(--brown);
+    color: white;
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.count-box {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    border-radius: 15px;
+}
+
+.count-box span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+}
+
+.count-box small {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   COUPLE
+================================ */
+
+.couple {
+    text-align: center;
+}
+
+.couple-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 100px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.person-card {
+    padding: 20px;
+}
+
+.person-photo {
+    width: 280px;
+    height: 350px;
+
+    margin: 0 auto 25px;
+
+    overflow: hidden;
+
+    border-radius: 150px 150px 20px 20px;
+}
+
+.person-photo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.person-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.person-card p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.and {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 60px;
+
+    color: var(--gold);
+}
+
+
+/* ================================
+   EVENT
+================================ */
+
+.event {
+    background: #eee7dc;
+    text-align: center;
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.event-card {
+    background: var(--light);
+
+    padding: 45px 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.05);
+}
+
+.event-icon {
+    font-size: 35px;
+
+    color: var(--gold);
+
+    margin-bottom: 20px;
+}
+
+.event-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-weight: 600;
+}
+
+.map-btn,
+.whatsapp-btn,
+.copy-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    border: none;
+
+    background: var(--brown);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.map-btn:hover,
+.whatsapp-btn:hover,
+.copy-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+
+/* ================================
+   GALLERY
+================================ */
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================================
+   GIFT
+================================ */
+
+.gift {
+    background: #eee7dc;
+    text-align: center;
+}
+
+.gift-description {
+    max-width: 600px;
+
+    margin: -20px auto 40px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.bank-card {
+    max-width: 450px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: var(--light);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08);
+}
+
+.bank-logo {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.bank-name {
+    font-size: 13px;
+}
+
+.bank-card h3 {
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0;
+}
+
+.bank-card > p {
+    font-size: 13px;
+}
+
+#copyMessage {
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #6a8a5a;
+}
+
+
+/* ================================
+   DRESS CODE
+================================ */
+
+.dresscode {
+    text-align: center;
+}
+
+.dress-icon {
+    font-size: 50px;
+
+    color: var(--gold);
+
+    margin-bottom: 20px;
+}
+
+.dresscode p {
+    max-width: 500px;
+
+    margin: 10px auto;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   RSVP
+================================ */
+
+.rsvp {
+    text-align: center;
+
+    background: var(--brown);
+
+    color: white;
+}
+
+.rsvp p {
+    margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+    background: white;
+    color: var(--brown);
+}
+
+
+/* ================================
+   CLOSING
+================================ */
+
+.closing {
+    text-align: center;
+
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(30,25,20,0.5),
+            rgba(30,25,20,0.5)
+        ),
+        url("images/closing.jpg")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.closing h2 {
+    margin-bottom: 20px;
+}
+
+.closing p:last-child {
+    letter-spacing: 3px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    background: #251f1a;
+
+    color: white;
+}
+
+
+/* ================================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(60px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 800px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .couple-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .and {
+        margin: -10px 0;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-photo {
+        height: 500px;
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVE HP
+================================ */
+
+@media (max-width: 500px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .opening h1 {
+        font-size: 55px;
+    }
+
+    .small-text {
+        letter-spacing: 3px;
+    }
+
+    .hero-photo {
+        height: 430px;
+    }
+
+    .quote {
+        font-size: 17px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .count-box {
+        width: 75px;
+        height: 85px;
+    }
+
+    .count-box span {
+        font-size: 30px;
+    }
+
+    .count-box small {
+        font-size: 9px;
+    }
+
+    .person-photo {
+        width: 230px;
+        height: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .gallery-item {
+        height: 220px;
+    }
+
+    .bank-card {
+        padding: 30px 20px;
+    }
+
+    .bank-card h3 {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .music-btn {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* ================================
+   REDUCE MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+}

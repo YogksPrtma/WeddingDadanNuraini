@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Undangan Pernikahan | Dadan & Nuraini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================= -->
+    <!-- COVER / OPENING -->
+    <!-- ============================= -->
+
+    <section class="opening" id="opening">
+
+        <div class="opening-overlay"></div>
+
+        <div class="opening-content">
+
+            <p class="small-text">THE WEDDING OF</p>
+
+            <h1>Dadan <span>&</span> Nuraini</h1>
+
+            <p class="opening-date">
+                Jumat, 11 September 2026
+            </p>
+
+            <button class="open-btn" onclick="openInvitation()">
+                Buka Undangan
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main id="mainContent">
+
+        <!-- MUSIC -->
+
+        <audio id="weddingMusic" loop>
+            <source src="c:\Users\RSJ PROV JABAR\Downloads\Dewa - Risalah Hati - LIRIK LAGU.mp3" type="audio/mpeg">
+        </audio>
+
+        <button class="music-btn" id="musicButton" onclick="toggleMusic()">
+            🎵
+        </button>
+
+
+        <!-- HERO -->
+
+        <section class="hero section">
+
+            <div class="container reveal">
+
+                <p class="subtitle">
+                    THE WEDDING OF
+                </p>
+
+                <h1 class="couple-name">
+                    Dadan <span>&</span> Nuraini
+                </h1>
+
+                <p class="date">
+                    11 . 09 . 2026
+                </p>
+
+                <div class="hero-photo">
+                    <img src="f:\Web Wedding\IMG-20260802-WA0008.jpg" alt="Foto Dadan & Nuraini">
+                </div>
+
+                <p class="quote">
+                    "Dan di antara tanda-tanda kekuasaan-Nya ialah
+                    Dia menciptakan untukmu pasangan hidup dari jenismu sendiri,
+                    supaya kamu merasa tenteram kepadanya."
+                </p>
+
+                <p class="quote-source">
+                    QS. Ar-Rum : 21
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COUNTDOWN -->
+
+        <section class="countdown-section section">
+
+            <div class="container reveal">
+
+                <p class="subtitle">COUNTDOWN</p>
+
+                <h2>Menuju Hari Bahagia</h2>
+
+                <div class="countdown">
+
+                    <div class="count-box">
+                        <span id="days">00</span>
+                        <small>Hari</small>
+                    </div>
+
+                    <div class="count-box">
+                        <span id="hours">00</span>
+                        <small>Jam</small>
+                    </div>
+
+                    <div class="count-box">
+                        <span id="minutes">00</span>
+                        <small>Menit</small>
+                    </div>
+
+                    <div class="count-box">
+                        <span id="seconds">00</span>
+                        <small>Detik</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEMPELAI -->
+
+        <section class="couple section">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <p class="subtitle">
+                        BRIDE & GROOM
+                    </p>
+
+                    <h2>Dengan Penuh Kebahagiaan</h2>
+
+                </div>
+
+
+                <div class="couple-grid">
+
+                    <!-- PRIA -->
+
+                    <div class="person-card reveal">
+
+                        <div class="person-photo">
+                            <img src="f:\Web Wedding\IMG-20260802-WA0000.jpg" alt="Dadan">
+                        </div>
+
+                        <h3>Dadan</h3>
+
+                        <p>
+                            Putra pertama dari<br>
+                            Bapak Utar & Ibu Tutu Maryati (Almarhumah)
+                        </p>
+
+                    </div>
+
+
+                    <div class="and reveal">
+                        &
+                    </div>
+
+
+                    <!-- WANITA -->
+
+                    <div class="person-card reveal">
+
+                        <div class="person-photo">
+                            <img src="f:\Web Wedding\IMG-20260802-WA0004.jpg" alt="Nuraini">
+                        </div>
+
+                        <h3>Nuraini</h3>
+
+                        <p>
+                            Putri keempat dari<br>
+                            Bapak Rian & Ibu Nimih
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT -->
+
+        <section class="event section">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <p class="subtitle">
+                        SAVE THE DATE
+                    </p>
+
+                    <h2>Acara Pernikahan</h2>
+
+                </div>
+
+
+                <div class="event-grid">
+
+                    <!-- AKAD -->
+
+                    <div class="event-card reveal">
+
+                        <div class="event-icon">
+                            ♡
+                        </div>
+
+                        <h3>Akad Nikah</h3>
+
+                        <p class="event-date">
+                            Jumat, 11 September 2026
+                        </p>
+
+                        <p>
+                            10.00 WIB - Selesai
+                        </p>
+
+                        <p>
+                            Jl. Gang Sawo 3, Rt003/028 no 70<br>
+                            Pengasinan, Rawalumbu<br>
+                            Bekasi, Jawa Barat
+                        </p>
+
+                        <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            class="map-btn"
+                        >
+                            Lihat Lokasi
+                        </a>
+
+                    </div>
+
+
+                    <!-- RESEPSI -->
+
+                    <div class="event-card reveal">
+
+                        <div class="event-icon">
+                            ♡
+                        </div>
+
+                        <h3>Resepsi</h3>
+
+                        <p class="event-date">
+                            Jumat, 11 September 2026
+                        </p>
+
+                        <p>
+                            10.00 WIB - Selesai
+                        </p>
+
+                        <p>
+                            Jl. Gang Sawo 3, Rt003/028 no 70<br>
+                            Pengasinan, Rawalumbu<br>
+                            Bekasi, Jawa Barat
+                        </p>
+
+                        <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            class="map-btn"
+                        >
+                            Lihat Lokasi
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section class="gallery section">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <p class="subtitle">
+                        OUR MOMENTS
+                    </p>
+
+                    <h2>Galeri</h2>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0001.jpg" alt="Foto prewedding">
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0002.jpg" alt="Foto prewedding">
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0006.jpg" alt="Foto prewedding">
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0007.jpg" alt="Foto prewedding">
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0008.jpg" alt="Foto prewedding">
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img src="f:\Web Wedding\IMG-20260802-WA0009.jpg" alt="Foto prewedding">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REKENING -->
+
+        <section class="gift section">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <p class="subtitle">
+                        WEDDING GIFT
+                    </p>
+
+                    <h2>Hadiah Pernikahan</h2>
+
+                    <p class="gift-description">
+                        Doa dan kehadiran Anda merupakan hadiah terindah bagi kami.
+                        Jika ingin memberikan tanda kasih, dapat melalui rekening berikut.
+                    </p>
+
+                </div>
+
+
+                <div class="bank-card reveal">
+
+                    <div class="bank-logo">
+                        BRI
+                    </div>
+
+                    <p class="bank-name">
+                        Bank Rakyat Indonesia
+                    </p>
+
+                    <h3 id="accountNumber">
+                        2113-01-004293-53-5
+                    </h3>
+
+                    <p>
+                        a.n. Nuraini
+                    </p>
+
+                    <button
+                        class="copy-btn"
+                        onclick="copyAccount()"
+                    >
+                        Salin Nomor Rekening
+                    </button>
+
+                    <span id="copyMessage"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+       
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2026 YogksProductions. All rights reserved
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script>
+
+        /* =========================
+           OPEN INVITATION
+        ========================= */
+
+        function openInvitation() {
+
+            const opening = document.getElementById("opening");
+
+            opening.classList.add("hide");
+
+            document.body.classList.add("opened");
+
+            const music = document.getElementById("weddingMusic");
+
+            music.play().catch(() => {
+                console.log("Browser memblokir autoplay.");
+            });
+
+        }
+
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        function toggleMusic() {
+
+            const music = document.getElementById("weddingMusic");
+            const button = document.getElementById("musicButton");
+
+            if (music.paused) {
+
+                music.play();
+
+                button.innerHTML = "🎵";
+
+            } else {
+
+                music.pause();
+
+                button.innerHTML = "🔇";
+
+            }
+
+        }
+
+
+        /* =========================
+           COUNTDOWN
+        ========================= */
+
+        const weddingDate = new Date(
+            "September 11, 2026 08:00:00"
+        ).getTime();
+
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+
+            const distance = weddingDate - now;
+
+
+            if (distance <= 0) {
+
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+
+                return;
+
+            }
+
+
+            const days = Math.floor(
+                distance / (1000 * 60 * 60 * 24)
+            );
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24))
+                / (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60))
+                / (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60))
+                / 1000
+            );
+
+
+            document.getElementById("days").innerHTML =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").innerHTML =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").innerHTML =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").innerHTML =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+
+
+        /* =========================
+           SCROLL ANIMATION
+        ========================= */
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+        document
+            .querySelectorAll(".reveal")
+            .forEach((element) => {
+
+                observer.observe(element);
+
+            });
+
+
+        /* =========================
+           COPY REKENING
+        ========================= */
+
+        function copyAccount() {
+
+            const account =
+                document.getElementById("accountNumber").innerText;
+
+            navigator.clipboard.writeText(account);
+
+            const message =
+                document.getElementById("copyMessage");
+
+            message.innerText =
+                "Nomor rekening berhasil disalin ✓";
+
+            setTimeout(() => {
+
+                message.innerText = "";
+
+            }, 2500);
+
+        }
+
+    </script>
+
+</body>
+</html>
